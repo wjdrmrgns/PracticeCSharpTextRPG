@@ -5,6 +5,8 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeCSharpTextRPG", "PracticeCSharpTextRPG\PracticeCSharpTextRPG.csproj", "{DE8751BF-E5E3-46A4-815D-C9665E9E0DE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPPractice", "OOPPractice\OOPPractice.csproj", "{647A13A9-B2CE-49AE-944B-95A106B53971}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DE8751BF-E5E3-46A4-815D-C9665E9E0DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE8751BF-E5E3-46A4-815D-C9665E9E0DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE8751BF-E5E3-46A4-815D-C9665E9E0DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{647A13A9-B2CE-49AE-944B-95A106B53971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647A13A9-B2CE-49AE-944B-95A106B53971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647A13A9-B2CE-49AE-944B-95A106B53971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647A13A9-B2CE-49AE-944B-95A106B53971}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
