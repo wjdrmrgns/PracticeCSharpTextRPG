@@ -1,44 +1,31 @@
-﻿namespace OOPPractice
+﻿using System.Runtime.CompilerServices;
+
+namespace OOPPractice
 {
     // OOP(은닉성/상속성/다항성)
+    
+    // 자동차
+    // 핸들 페달 차문
+        // 전기장치 엔진 기름 <-> 외부 노출??
 
-    class Player // 부모 or 기반
+    class Knight
     {
-        // 필드
-        static public int counter = 1; // 오로지 1개만 존재!
-        public int id;
-        public int hp;
-        public int attack;
+        // 접근 한정자
+        // public private protected
+        protected int hp;
 
-        public Player()
+        public void SetHP(int hp)
         {
-            Console.WriteLine("Player 생성자 호출!");
-        }
-
-        public void Move()
-        {
-            Console.WriteLine("Knight Move");
-        }
-
-        public void Attack()
-        {
-            Console.WriteLine("Knight Attack");
+            this.hp = 20;
         }
     }
 
-    class Mage : Player
+    class SuperKnight : Knight
     {
-
-    }
-
-    class Archer : Player
-    {
-        
-    }
-
-    class Knight : Player // 자식 or 파생
-    {
-
+        void Test()
+        {
+            hp = 10;
+        }
     }
 
     internal class Program
@@ -47,8 +34,8 @@
         static void Main(string[] args)
         {
             Knight knight = new Knight();
-            knight.Move(); // 일반
-
+            
+            knight.SetHP(100);
         }
     }
 }
