@@ -3,39 +3,44 @@
 namespace OOPPractice
 {
     // OOP(은닉성/상속성/다항성)
-    
-    // 자동차
-    // 핸들 페달 차문
-        // 전기장치 엔진 기름 <-> 외부 노출??
 
-    class Knight
+    class Player
     {
-        // 접근 한정자
-        // public private protected
         protected int hp;
-
-        public void SetHP(int hp)
-        {
-            this.hp = 20;
-        }
+        protected int attack;
     }
 
-    class SuperKnight : Knight
+    class Knight : Player
     {
-        void Test()
-        {
-            hp = 10;
-        }
+
+    }
+
+    class Mage : Player
+    {
+        public int mp;
     }
 
     internal class Program
     {
+        static void EnterGame(Player player)
+        {
+            //bool isMage = player is Mage;
+            Mage mage = (player as Mage);
+            if (mage != null)
+            {
+                //Mage mage = (Mage)player;
+                mage.mp = 10;
+            }
+            
+        }
 
         static void Main(string[] args)
         {
             Knight knight = new Knight();
-            
-            knight.SetHP(100);
+            Mage mage = new Mage();
+
+            //EnterGame(knight);
+            EnterGame(mage);
         }
     }
 }
