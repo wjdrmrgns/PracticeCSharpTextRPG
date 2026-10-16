@@ -34,7 +34,14 @@ namespace PracticeCSharpTextRPG
         }
 
         public int GetHp() { return hp; }
-        public int GetAttack() { return attack; } 
+        public int GetAttack() { return attack; }
+
+        public bool isDead() { return hp <= 0; }
+        public void OnDamaged(int damage)
+        {
+            hp -= damage;
+            if(hp < 0) hp = 0;
+        }
     }
 
     class Knight : Player
