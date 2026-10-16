@@ -1,61 +1,18 @@
 ﻿namespace OOPPractice
 {
-    // 객체(OOP Object Oriente Programming)
+    // OOP(은닉성/상속성/다항성)
 
-    // Knight
-
-    // 속성: hp, attack, pos, etc...
-    // 기능: Move, Attack, Die, etc...
-    
-    // Ref 참조
-    class Knight
+    class Player // 부모 or 기반
     {
+        // 필드
         static public int counter = 1; // 오로지 1개만 존재!
-
         public int id;
         public int hp;
         public int attack;
 
-        static public void Test()
+        public Player()
         {
-            counter++;
-        }
-        static public Knight CreateKnight()
-        {
-            Knight knight = new Knight();
-            knight.hp = 100;
-            knight.attack = 50;
-            return knight;
-        }
-
-        public Knight()
-        {
-            id = counter++;
-
-            hp = 100;
-            attack = 10;
-            Console.WriteLine("생성자 호출!");
-        }
-
-        public Knight(int hp) : this()
-        {
-            this.hp = hp;
-            Console.WriteLine("int 생성자 호출!");
-        }
-
-        public Knight(int hp, int attack)
-        {
-            this.hp = hp;
-            this.attack = attack;
-            Console.WriteLine("int int 생성자 호출!");
-        }
-
-        public Knight Clone()
-        {
-            Knight knight = new Knight();
-            knight.hp = hp;
-            knight.attack = attack;
-            return knight;
+            Console.WriteLine("Player 생성자 호출!");
         }
 
         public void Move()
@@ -69,12 +26,27 @@
         }
     }
 
+    class Mage : Player
+    {
+
+    }
+
+    class Archer : Player
+    {
+        
+    }
+
+    class Knight : Player // 자식 or 파생
+    {
+
+    }
+
     internal class Program
     {
 
         static void Main(string[] args)
         {
-            Knight knight = Knight.CreateKnight(); // static
+            Knight knight = new Knight();
             knight.Move(); // 일반
 
         }
